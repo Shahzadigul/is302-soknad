@@ -1,12 +1,643 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IS-302 Søknad</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>S Hina Gul | IS-302 Praksisprosjekt</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f5f7fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
+
+    .logo {
+      font-weight: 800;
+      color: #1d4ed8;
+      letter-spacing: 0.2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      font-size: 15px;
+      color: #475569;
+    }
+
+    .nav-links a:hover {
+      color: #1d4ed8;
+    }
+
+    .hero {
+      padding: 78px 0 56px;
+      background: radial-gradient(circle at top left, #dbeafe, transparent 38%),
+                  linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1.05;
+      letter-spacing: -1.8px;
+      margin-bottom: 20px;
+      color: #0f172a;
+    }
+
+    .hero p {
+      font-size: 19px;
+      color: #475569;
+      max-width: 680px;
+      margin-bottom: 28px;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 20px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 22px rgba(15, 23, 42, 0.12);
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: white;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #1d4ed8;
+      border-color: #bfdbfe;
+    }
+
+    .profile-card {
+      background: white;
+      border-radius: 32px;
+      padding: 30px;
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+      border: 1px solid #e5e7eb;
+    }
+
+    .avatar {
+      width: 92px;
+      height: 92px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 34px;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    .profile-card h2 {
+      font-size: 27px;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+
+    .profile-card p {
+      color: #64748b;
+      margin-bottom: 16px;
+    }
+
+    .info-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .info-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 1px solid #e5e7eb;
+      color: #475569;
+    }
+
+    .info-item strong {
+      color: #0f172a;
+    }
+
+    section {
+      padding: 56px 0;
+    }
+
+    .section-title {
+      margin-bottom: 24px;
+    }
+
+    .section-title span {
+      color: #2563eb;
+      font-weight: 800;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .section-title h2 {
+      color: #0f172a;
+      font-size: clamp(28px, 4vw, 42px);
+      margin-top: 6px;
+      letter-spacing: -0.8px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 26px;
+      padding: 26px;
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+    }
+
+    .card h3 {
+      color: #0f172a;
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .card p, .card li {
+      color: #475569;
+    }
+
+    .card ul {
+      margin-left: 18px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .skill {
+      background: white;
+      border: 1px solid #dbeafe;
+      color: #1e3a8a;
+      padding: 14px 16px;
+      border-radius: 18px;
+      font-weight: 750;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.06);
+    }
+
+    .application-box {
+      background: white;
+      border-radius: 30px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 18px 48px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+    }
+
+    .application-header {
+      background: #0f172a;
+      color: white;
+      padding: 24px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .application-header h2 {
+      font-size: 24px;
+    }
+
+    .copy-btn {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 11px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: 800;
+    }
+
+    .letter {
+      padding: 32px;
+      font-family: Georgia, "Times New Roman", serif;
+      white-space: pre-wrap;
+      color: #1f2937;
+      font-size: 17px;
+      line-height: 1.75;
+      background: #fff;
+    }
+
+    .video-box {
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: white;
+      border-radius: 30px;
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: center;
+      box-shadow: 0 20px 48px rgba(37, 99, 235, 0.22);
+    }
+
+    .video-box h2 {
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .video-box p {
+      color: #dbeafe;
+      margin-bottom: 18px;
+    }
+
+    .video-placeholder {
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 24px;
+      padding: 28px;
+      text-align: center;
+    }
+
+    .video-placeholder strong {
+      display: block;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .contact-item {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+    }
+
+    .contact-item strong {
+      color: #0f172a;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .contact-item a, .contact-item span {
+      color: #2563eb;
+      word-break: break-word;
+    }
+
+    footer {
+      padding: 30px 0;
+      text-align: center;
+      color: #64748b;
+      border-top: 1px solid #e5e7eb;
+      background: white;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .video-box {
+        grid-template-columns: 1fr;
+      }
+
+      .cards,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .letter {
+        padding: 22px;
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Søknad om praksisplass</h1>
-  <p>Dette er min søknadsside for IS-302 praksisprosjekt.</p>
+  <header>
+    <nav class="container">
+      <a class="logo" href="#top">S Hina Gul · IS-302</a>
+      <div class="nav-links">
+        <a href="#om-meg">Om meg</a>
+        <a href="#ferdigheter">Ferdigheter</a>
+        <a href="#prosjekter">Prosjekter</a>
+        <a href="#soknad">Søknad</a>
+        <a href="#video">Video</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="tag">IS-302 Praksisprosjekt · Høsten 2026</span>
+          <h1>Søker praksisplass innen IT og informasjonssystemer</h1>
+          <p>
+            Hei, jeg heter S Hina Gul. Jeg studerer IT og informasjonssystemer ved Universitetet i Agder og søker praksisplass gjennom IS-302 Praksisprosjekt høsten 2026.
+          </p>
+          <div class="button-row">
+            <a class="btn btn-primary" href="#soknad">Les søknaden</a>
+            <a class="btn btn-secondary" href="#video">Se presentasjonsvideo</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/s-hina-gul-700651153" target="_blank" rel="noopener">LinkedIn-profil</a>
+          </div>
+        </div>
+
+        <aside class="profile-card">
+          <div class="avatar">SH</div>
+          <h2>S Hina Gul</h2>
+          <p>IT-student med interesse for Salesforce, CRM-systemer, digitalisering og praktisk IT-arbeid.</p>
+          <div class="info-list">
+            <div class="info-item"><strong>Studie</strong><span>IT og informasjonssystemer</span></div>
+            <div class="info-item"><strong>Universitet</strong><span>UiA</span></div>
+            <div class="info-item"><strong>Emne</strong><span>IS-302 Praksisprosjekt</span></div>
+            <div class="info-item"><strong>Sted</strong><span>Kristiansand</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="om-meg">
+      <div class="container">
+        <div class="section-title">
+          <span>Profil</span>
+          <h2>Om meg</h2>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>Hvem jeg er</h3>
+            <p>
+              Jeg heter S Hina Gul og studerer IT og informasjonssystemer ved Universitetet i Agder. Jeg er motivert for å få praktisk erfaring med hvordan informasjonssystemer brukes i arbeidslivet.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Hva jeg er interessert i</h3>
+            <p>
+              Jeg er særlig interessert i Salesforce, CRM-systemer, digitalisering, brukerstøtte og hvordan teknologi kan forbedre arbeidsprosesser og informasjonsflyt i organisasjoner.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Hva jeg ønsker å lære</h3>
+            <p>
+              Gjennom praksis ønsker jeg å utvikle praktiske ferdigheter, lære mer om profesjonelt IT-arbeid og forstå bedre hvordan organisasjoner bruker digitale løsninger i hverdagen.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ferdigheter">
+      <div class="container">
+        <div class="section-title">
+          <span>Kompetanse</span>
+          <h2>Ferdigheter og interesser</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill">Salesforce</div>
+          <div class="skill">CRM-systemer</div>
+          <div class="skill">Digitalisering</div>
+          <div class="skill">Brukerstøtte</div>
+          <div class="skill">Systemforståelse</div>
+          <div class="skill">Kommunikasjon</div>
+          <div class="skill">Problemløsning</div>
+          <div class="skill">Strukturert arbeid</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prosjekter">
+      <div class="container">
+        <div class="section-title">
+          <span>Erfaring</span>
+          <h2>Prosjekter fra tidligere semester</h2>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>NRL-prosjekt Gr14 2025H</h3>
+            <p>
+              Dette er et gruppeprosjekt fra forrige semester. Prosjektet viser erfaring med samarbeid, prosjektarbeid, kodehåndtering og bruk av GitHub som versjonskontroll.
+            </p>
+            <br />
+            <a class="btn btn-secondary" href="https://github.com/aanonho/NRL-prosjekt-Gr14-2025H.git" target="_blank" rel="noopener">Se prosjekt på GitHub</a>
+          </article>
+
+          <article class="card">
+            <h3>IS218-prosjekt</h3>
+            <p>
+              Dette prosjektet ble laget i forbindelse med emnet IS218. Prosjektet viser praktisk erfaring med utviklingsarbeid, strukturering av kode og publisering av prosjektfiler på GitHub.
+            </p>
+            <br />
+            <a class="btn btn-secondary" href="https://github.com/snbhansen/IS218.git" target="_blank" rel="noopener">Se prosjekt på GitHub</a>
+          </article>
+
+          <article class="card">
+            <h3>IS-302 praksisnettside</h3>
+            <p>
+              Denne nettsiden er laget som en del av forberedelsen til praksisprosjektet. Den presenterer profil, ferdigheter, prosjekter, søknadstekst, LinkedIn og presentasjonsvideo.
+            </p>
+            <br />
+            <a class="btn btn-secondary" href="https://shahzadigul.github.io/is302-soknad/" target="_blank" rel="noopener">Se nettsiden</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="praksis">
+      <div class="container">
+        <div class="section-title">
+          <span>Praksisønske</span>
+          <h2>Hva slags praksisplass jeg søker</h2>
+        </div>
+        <div class="card">
+          <p>
+            Jeg søker en praksisplass hvor jeg kan arbeide med IT, digitale systemer, CRM-løsninger, brukerstøtte, systemadministrasjon eller digitalisering. Jeg har også erfaring fra tidligere studentprosjekter, blant annet NRL-prosjekt Gr14 2025H og et IS218-prosjekt, hvor jeg har jobbet med samarbeid, kode, prosjektarbeid og GitHub. Jeg ønsker å lære hvordan organisasjoner bruker informasjonssystemer i praksis, og hvordan teknologi kan bidra til bedre arbeidsprosesser, god kommunikasjon og mer effektiv informasjonsflyt.
+          </p>
+          <br />
+          <p>
+            Jeg er også interessert i oppgaver knyttet til analyse, testing, opplæring, systembruk, dokumentasjon eller forbedring av digitale løsninger. Målet mitt er å bidra positivt, samtidig som jeg utvikler faglige og praktiske ferdigheter i en profesjonell arbeidssituasjon.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="soknad">
+      <div class="container">
+        <div class="section-title">
+          <span>Søknad</span>
+          <h2>Søknad om praksisplass</h2>
+        </div>
+        <div class="application-box">
+          <div class="application-header">
+            <h2>Ferdig søknadstekst</h2>
+            <button class="copy-btn" onclick="copyApplication()">Kopier søknad</button>
+          </div>
+          <div class="letter" id="applicationText">Til [navn på bedrift]
+
+Hei,
+
+Jeg ønsker å søke praksisplass hos dere gjennom emnet IS-302 Praksisprosjekt ved Universitetet i Agder høsten 2026.
+
+Jeg heter S Hina Gul og studerer IT og informasjonssystemer ved UiA. Jeg er interessert i hvordan digitale systemer, CRM-løsninger og teknologi kan brukes til å forbedre arbeidsprosesser, kundedialog og informasjonsflyt i organisasjoner.
+
+Jeg har særlig interesse for Salesforce, CRM-systemer, digitalisering, brukerstøtte og praktisk IT-arbeid. Gjennom tidligere studentprosjekter, blant annet NRL-prosjekt Gr14 2025H og et IS218-prosjekt, har jeg fått erfaring med prosjektarbeid, samarbeid, kodehåndtering og bruk av GitHub. Jeg liker å lære nye systemer, arbeide strukturert og finne gode løsninger på praktiske problemer.
+
+Gjennom praksisperioden ønsker jeg å få erfaring med hvordan informasjonssystemer brukes i arbeidslivet. Jeg håper å kunne bidra positivt hos dere med motivasjon, lærevillighet og interesse for digitale løsninger.
+
+Jeg håper dere vil vurdere meg som praksisstudent hos dere.
+
+Vennlig hilsen
+Shahzadi Hina Gul
+[46850064]
+<div hinagul@live.no=""></div>
+LinkedIn: https://www.linkedin.com/in/s-hina-gul-700651153
+Nettside: https://shahzadigul.github.io/is302-soknad/</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="video">
+      <div class="container">
+        <div class="video-box">
+          <div>
+            <h2>Presentasjonsvideo</h2>
+            <p>
+              Her kan bedrifter se en kort presentasjonsvideo på maks 2 minutter. Videoen bør kort forklare hvem jeg er, hva jeg studerer, hva jeg er interessert i og hvorfor jeg søker praksisplass.
+            </p>
+            <a class="btn btn-secondary" href="[LEGG-INN-VIDEOLENKE-HER]" target="_blank" rel="noopener">Se video</a>
+          </div>
+          <div class="video-placeholder">
+            <strong>Video kommer her</strong>
+            <p>Bytt ut [LEGG-INN-VIDEOLENKE-HER] med lenken til YouTube, Google Drive eller OneDrive.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt">
+      <div class="container">
+        <div class="section-title">
+          <span>Kontakt</span>
+          <h2>Kontaktinformasjon</h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <strong>E-post</strong>
+            <span>[legg inn e-postadresse]</span>
+          </div>
+          <div class="contact-item">
+            <strong>Telefon</strong>
+            <span>[legg inn telefonnummer]</span>
+          </div>
+          <div class="contact-item">
+            <strong>LinkedIn</strong>
+            <a href="https://www.linkedin.com/in/s-hina-gul-700651153" target="_blank" rel="noopener">linkedin.com/in/s-hina-gul-700651153</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 S Hina Gul · IS-302 Praksisprosjekt · Universitetet i Agder</p>
+    </div>
+  </footer>
+
+  <script>
+    function copyApplication() {
+      const text = document.getElementById("applicationText").innerText;
+      navigator.clipboard.writeText(text)
+        .then(() => alert("Søknaden er kopiert!"))
+        .catch(() => alert("Kunne ikke kopiere automatisk. Marker teksten og kopier manuelt."));
+    }
+  </script>
 </body>
 </html>
