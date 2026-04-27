@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>S Hina Gul | IS-302 Praksisprosjekt</title>
+  <title>Shahzadi Hina Gul | Søknad til Kartverket | IS-302</title>
+
   <style>
     * {
       box-sizing: border-box;
@@ -33,7 +34,7 @@
     }
 
     header {
-      background: rgba(255, 255, 255, 0.92);
+      background: rgba(255, 255, 255, 0.94);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid #e5e7eb;
       position: sticky;
@@ -67,8 +68,9 @@
 
     .hero {
       padding: 78px 0 56px;
-      background: radial-gradient(circle at top left, #dbeafe, transparent 38%),
-                  linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+      background:
+        radial-gradient(circle at top left, #dbeafe, transparent 38%),
+        linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
     }
 
     .hero-grid {
@@ -100,7 +102,7 @@
     .hero p {
       font-size: 19px;
       color: #475569;
-      max-width: 680px;
+      max-width: 700px;
       margin-bottom: 28px;
     }
 
@@ -119,6 +121,7 @@
       font-weight: 800;
       transition: transform 0.18s ease, box-shadow 0.18s ease;
       border: 1px solid transparent;
+      cursor: pointer;
     }
 
     .btn:hover {
@@ -149,7 +152,7 @@
       width: 92px;
       height: 92px;
       border-radius: 28px;
-      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      background: linear-gradient(135deg, #2563eb, #16a34a);
       color: white;
       display: grid;
       place-items: center;
@@ -231,12 +234,14 @@
       font-size: 21px;
     }
 
-    .card p, .card li {
+    .card p,
+    .card li {
       color: #475569;
     }
 
     .card ul {
       margin-left: 18px;
+      margin-top: 10px;
     }
 
     .skills-grid {
@@ -254,6 +259,29 @@
       font-weight: 750;
       text-align: center;
       box-shadow: 0 8px 20px rgba(37, 99, 235, 0.06);
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #0f172a, #1d4ed8);
+      color: white;
+      border-radius: 30px;
+      padding: 34px;
+      box-shadow: 0 20px 48px rgba(37, 99, 235, 0.22);
+    }
+
+    .highlight-box h3 {
+      font-size: 28px;
+      margin-bottom: 14px;
+    }
+
+    .highlight-box p,
+    .highlight-box li {
+      color: #dbeafe;
+    }
+
+    .highlight-box ul {
+      margin-left: 20px;
+      margin-top: 14px;
     }
 
     .application-box {
@@ -355,7 +383,8 @@
       margin-bottom: 8px;
     }
 
-    .contact-item a, .contact-item span {
+    .contact-item a,
+    .contact-item span {
       color: #2563eb;
       word-break: break-word;
     }
@@ -400,12 +429,15 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <nav class="container">
-      <a class="logo" href="#top">S Hina Gul · IS-302</a>
+      <a class="logo" href="#top">Shahzadi Hina Gul · IS-302</a>
+
       <div class="nav-links">
         <a href="#om-meg">Om meg</a>
+        <a href="#kartverket">Kartverket</a>
         <a href="#ferdigheter">Ferdigheter</a>
         <a href="#prosjekter">Prosjekter</a>
         <a href="#soknad">Søknad</a>
@@ -419,27 +451,58 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <span class="tag">IS-302 Praksisprosjekt · Høsten 2026</span>
-          <h1>Søker praksisplass innen IT og informasjonssystemer</h1>
+          <span class="tag">IS-302 Praksisprosjekt · Søknad til Kartverket</span>
+
+          <h1>Søker praksisplass hos Kartverket innen IT og informasjonssystemer</h1>
+
           <p>
-            Hei, jeg heter S Hina Gul. Jeg studerer IT og informasjonssystemer ved Universitetet i Agder og søker praksisplass gjennom IS-302 Praksisprosjekt høsten 2026.
+            Hei, jeg heter Shahzadi Hina Gul. Jeg studerer IT og informasjonssystemer ved
+            Universitetet i Agder og søker praksisplass gjennom emnet IS-302 Praksisprosjekt.
+            Jeg ønsker særlig å bidra i Kartverket sitt prosjekt med å videreutvikle en MVP for
+            tryggere luftfart og innrapportering av luftfartshindre til Nasjonalt register over
+            luftfartshindre.
           </p>
+
           <div class="button-row">
             <a class="btn btn-primary" href="#soknad">Les søknaden</a>
+            <a class="btn btn-secondary" href="#kartverket">Hvorfor Kartverket?</a>
             <a class="btn btn-secondary" href="#video">Se presentasjonsvideo</a>
-            <a class="btn btn-secondary" href="https://www.linkedin.com/in/s-hina-gul-700651153" target="_blank" rel="noopener">LinkedIn-profil</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/s-hina-gul-700651153" target="_blank" rel="noopener">
+              LinkedIn-profil
+            </a>
           </div>
         </div>
 
         <aside class="profile-card">
           <div class="avatar">SH</div>
-          <h2>S Hina Gul</h2>
-          <p>IT-student med interesse for Salesforce, CRM-systemer, digitalisering og praktisk IT-arbeid.</p>
+
+          <h2>Shahzadi Hina Gul</h2>
+
+          <p>
+            IT-student ved UiA med interesse for informasjonssystemer, samfunnsnyttige digitale
+            løsninger, CRM-systemer, systemutvikling, brukervennlighet og praktisk IT-arbeid.
+          </p>
+
           <div class="info-list">
-            <div class="info-item"><strong>Studie</strong><span>IT og informasjonssystemer</span></div>
-            <div class="info-item"><strong>Universitet</strong><span>UiA</span></div>
-            <div class="info-item"><strong>Emne</strong><span>IS-302 Praksisprosjekt</span></div>
-            <div class="info-item"><strong>Sted</strong><span>Kristiansand</span></div>
+            <div class="info-item">
+              <strong>Studie</strong>
+              <span>IT og informasjonssystemer</span>
+            </div>
+
+            <div class="info-item">
+              <strong>Universitet</strong>
+              <span>Universitetet i Agder</span>
+            </div>
+
+            <div class="info-item">
+              <strong>Emne</strong>
+              <span>IS-302 Praksisprosjekt</span>
+            </div>
+
+            <div class="info-item">
+              <strong>Sted</strong>
+              <span>Kristiansand</span>
+            </div>
           </div>
         </aside>
       </div>
@@ -451,25 +514,63 @@
           <span>Profil</span>
           <h2>Om meg</h2>
         </div>
+
         <div class="cards">
           <article class="card">
             <h3>Hvem jeg er</h3>
             <p>
-              Jeg heter S Hina Gul og studerer IT og informasjonssystemer ved Universitetet i Agder. Jeg er motivert for å få praktisk erfaring med hvordan informasjonssystemer brukes i arbeidslivet.
+              Jeg heter Shahzadi Hina Gul og studerer IT og informasjonssystemer ved Universitetet
+              i Agder. Gjennom IS-302 Praksisprosjekt ønsker jeg å få praktisk erfaring med hvordan
+              informasjonssystemer utvikles, brukes, innføres og forbedres i arbeidslivet.
             </p>
           </article>
+
           <article class="card">
             <h3>Hva jeg er interessert i</h3>
             <p>
-              Jeg er særlig interessert i Salesforce, CRM-systemer, digitalisering, brukerstøtte og hvordan teknologi kan forbedre arbeidsprosesser og informasjonsflyt i organisasjoner.
+              Jeg er særlig interessert i informasjonssystemer, digitalisering, systemutvikling,
+              brukervennlige løsninger, dataflyt, CRM-systemer og hvordan teknologi kan brukes til
+              å skape verdi for både organisasjoner og samfunnet.
             </p>
           </article>
+
           <article class="card">
             <h3>Hva jeg ønsker å lære</h3>
             <p>
-              Gjennom praksis ønsker jeg å utvikle praktiske ferdigheter, lære mer om profesjonelt IT-arbeid og forstå bedre hvordan organisasjoner bruker digitale løsninger i hverdagen.
+              Gjennom praksis ønsker jeg å lære mer om hvordan en organisasjon arbeider med behov,
+              krav, brukere, testing, opplæring, data og videreutvikling av digitale løsninger i
+              en profesjonell arbeidssituasjon.
             </p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="kartverket">
+      <div class="container">
+        <div class="section-title">
+          <span>Motivasjon</span>
+          <h2>Hvorfor Kartverket og NRL-prosjektet?</h2>
+        </div>
+
+        <div class="highlight-box">
+          <h3>Jeg ønsker å bidra til teknologi med samfunnsnytte</h3>
+
+          <p>
+            Kartverket sitt praksisprosjekt er spesielt interessant for meg fordi det kombinerer
+            informasjonssystemer, webapplikasjon, geodata, brukeropplevelse og samfunnsnytte.
+            Prosjektet handler om å utvikle en MVP som kan gjøre det enklere for piloter og
+            flybesetning å melde inn farlige luftfartshindre, som kraftlinjer, master og andre
+            objekter som kan være kritiske ved lavtflyging og utrykning.
+          </p>
+
+          <ul>
+            <li>Jeg synes det er motiverende å jobbe med en løsning som kan bidra til tryggere luftfart.</li>
+            <li>Jeg er interessert i hvordan kart, data og webteknologi kan brukes i praktiske situasjoner.</li>
+            <li>Jeg ønsker å lære mer om brukeropplevelse, spesielt løsninger som skal fungere raskt og enkelt i krevende situasjoner.</li>
+            <li>Jeg er nysgjerrig på hvordan innmeldinger, bilder, kommentarer og data kan behandles videre i et informasjonssystem.</li>
+            <li>Jeg ser dette som en god mulighet til å koble IS-302-faget til et reelt prosjekt i offentlig sektor.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -480,15 +581,24 @@
           <span>Kompetanse</span>
           <h2>Ferdigheter og interesser</h2>
         </div>
+
         <div class="skills-grid">
+          <div class="skill">Informasjonssystemer</div>
+          <div class="skill">IS-302 praksisfag</div>
+          <div class="skill">Systemutvikling</div>
+          <div class="skill">Webapplikasjoner</div>
+          <div class="skill">Geodata og kart</div>
+          <div class="skill">Brukeropplevelse</div>
+          <div class="skill">Dataflyt</div>
+          <div class="skill">Databaser</div>
+          <div class="skill">Testing</div>
+          <div class="skill">Dokumentasjon</div>
+          <div class="skill">GitHub</div>
+          <div class="skill">Prosjektarbeid</div>
           <div class="skill">Salesforce</div>
           <div class="skill">CRM-systemer</div>
           <div class="skill">Digitalisering</div>
-          <div class="skill">Brukerstøtte</div>
-          <div class="skill">Systemforståelse</div>
-          <div class="skill">Kommunikasjon</div>
           <div class="skill">Problemløsning</div>
-          <div class="skill">Strukturert arbeid</div>
         </div>
       </div>
     </section>
@@ -499,32 +609,76 @@
           <span>Erfaring</span>
           <h2>Prosjekter fra tidligere semester</h2>
         </div>
+
         <div class="cards">
           <article class="card">
             <h3>NRL-prosjekt Gr14 2025H</h3>
+
             <p>
-              Dette er et gruppeprosjekt fra forrige semester. Prosjektet viser erfaring med samarbeid, prosjektarbeid, kodehåndtering og bruk av GitHub som versjonskontroll.
+              Dette er et gruppeprosjekt fra forrige semester. Prosjektet er relevant for
+              Kartverket-stillingen fordi det knytter seg til NRL og viser erfaring med
+              prosjektarbeid, samarbeid, kodehåndtering og bruk av GitHub.
             </p>
+
             <br />
-            <a class="btn btn-secondary" href="https://github.com/aanonho/NRL-prosjekt-Gr14-2025H.git" target="_blank" rel="noopener">Se prosjekt på GitHub</a>
+
+            <p>
+              Erfaringen gir et godt utgangspunkt for å forstå hvordan digitale løsninger kan
+              videreutvikles fra tidligere studentarbeid til en mer konkret MVP.
+            </p>
+
+            <br />
+
+            <a class="btn btn-secondary" href="https://github.com/aanonho/NRL-prosjekt-Gr14-2025H.git" target="_blank" rel="noopener">
+              Se prosjekt på GitHub
+            </a>
           </article>
 
           <article class="card">
             <h3>IS218-prosjekt</h3>
+
             <p>
-              Dette prosjektet ble laget i forbindelse med emnet IS218. Prosjektet viser praktisk erfaring med utviklingsarbeid, strukturering av kode og publisering av prosjektfiler på GitHub.
+              Dette prosjektet ble laget i forbindelse med emnet IS218. Prosjektet viser praktisk
+              erfaring med utviklingsarbeid, strukturering av kode, samarbeid og publisering av
+              prosjektfiler på GitHub.
             </p>
+
             <br />
-            <a class="btn btn-secondary" href="https://github.com/snbhansen/IS218.git" target="_blank" rel="noopener">Se prosjekt på GitHub</a>
+
+            <p>
+              Prosjektet har gitt meg bedre forståelse for hvordan IT-løsninger kan planlegges,
+              bygges og dokumenteres, noe som er relevant for videre arbeid med informasjonssystemer
+              og IS-302 praksis.
+            </p>
+
+            <br />
+
+            <a class="btn btn-secondary" href="https://github.com/snbhansen/IS218.git" target="_blank" rel="noopener">
+              Se prosjekt på GitHub
+            </a>
           </article>
 
           <article class="card">
             <h3>IS-302 praksisnettside</h3>
+
             <p>
-              Denne nettsiden er laget som en del av forberedelsen til praksisprosjektet. Den presenterer profil, ferdigheter, prosjekter, søknadstekst, LinkedIn og presentasjonsvideo.
+              Denne nettsiden er laget som en del av forberedelsen til IS-302 Praksisprosjekt ved UiA.
+              Den presenterer profil, ferdigheter, tidligere prosjekter, søknadstekst, LinkedIn og
+              presentasjonsvideo.
             </p>
+
             <br />
-            <a class="btn btn-secondary" href="https://shahzadigul.github.io/is302-soknad/" target="_blank" rel="noopener">Se nettsiden</a>
+
+            <p>
+              Nettsiden viser interesse for web, digital presentasjon og praktisk bruk av teknologi
+              i en søknadsprosess.
+            </p>
+
+            <br />
+
+            <a class="btn btn-secondary" href="https://shahzadigul.github.io/is302-soknad/" target="_blank" rel="noopener">
+              Se nettsiden
+            </a>
           </article>
         </div>
       </div>
@@ -534,15 +688,33 @@
       <div class="container">
         <div class="section-title">
           <span>Praksisønske</span>
-          <h2>Hva slags praksisplass jeg søker</h2>
+          <h2>Hva jeg ønsker å jobbe med</h2>
         </div>
+
         <div class="card">
           <p>
-            Jeg søker en praksisplass hvor jeg kan arbeide med IT, digitale systemer, CRM-løsninger, brukerstøtte, systemadministrasjon eller digitalisering. Jeg har også erfaring fra tidligere studentprosjekter, blant annet NRL-prosjekt Gr14 2025H og et IS218-prosjekt, hvor jeg har jobbet med samarbeid, kode, prosjektarbeid og GitHub. Jeg ønsker å lære hvordan organisasjoner bruker informasjonssystemer i praksis, og hvordan teknologi kan bidra til bedre arbeidsprosesser, god kommunikasjon og mer effektiv informasjonsflyt.
+            Jeg ønsker å jobbe med en praksisoppgave der jeg kan bruke og utvikle kunnskap innen
+            informasjonssystemer, systemutvikling, webapplikasjoner, brukeropplevelse, dataflyt og
+            digitale løsninger. Kartverket sitt prosjekt med å utvikle en MVP for rapportering av
+            luftfartshindre virker svært relevant for IS-302, fordi det handler om både teknologi,
+            brukere, organisasjonens behov og praktisk verdi.
           </p>
+
           <br />
+
           <p>
-            Jeg er også interessert i oppgaver knyttet til analyse, testing, opplæring, systembruk, dokumentasjon eller forbedring av digitale løsninger. Målet mitt er å bidra positivt, samtidig som jeg utvikler faglige og praktiske ferdigheter i en profesjonell arbeidssituasjon.
+            Jeg er spesielt interessert i hvordan løsningen kan gjøres enkel og intuitiv for piloter
+            og flybesetning som skal rapportere hindre raskt i kart. Jeg synes også det er interessant
+            hvordan registerførere i Kartverket kan behandle, godkjenne eller avvise innmeldinger,
+            og hvordan data kan flyte videre mot NRL og test-API-er.
+          </p>
+
+          <br />
+
+          <p>
+            Målet mitt er å bidra positivt i prosjektet, samarbeide godt med studentgruppen og
+            fagpersoner hos Kartverket, og samtidig utvikle praktiske ferdigheter som er relevante
+            for videre studier, arbeidsliv og en mulig bacheloroppgave.
           </p>
         </div>
       </div>
@@ -552,31 +724,35 @@
       <div class="container">
         <div class="section-title">
           <span>Søknad</span>
-          <h2>Søknad om praksisplass</h2>
+          <h2>Søknad til Kartverket</h2>
         </div>
+
         <div class="application-box">
           <div class="application-header">
             <h2>Ferdig søknadstekst</h2>
             <button class="copy-btn" onclick="copyApplication()">Kopier søknad</button>
           </div>
-          <div class="letter" id="applicationText">Til [navn på bedrift]
+
+          <div class="letter" id="applicationText">Til Kartverket
 
 Hei,
 
-Jeg ønsker å søke praksisplass hos dere gjennom emnet IS-302 Praksisprosjekt ved Universitetet i Agder høsten 2026.
+Jeg ønsker å søke praksisplass hos Kartverket gjennom emnet IS-302 Praksisprosjekt ved Universitetet i Agder. Jeg er spesielt interessert i praksisprosjektet «Bli med å utvikle en MVP for tryggere luftfart», hvor målet er å videreutvikle en løsning for innrapportering av luftfartshindre til Nasjonalt register over luftfartshindre.
 
-Jeg heter S Hina Gul og studerer IT og informasjonssystemer ved UiA. Jeg er interessert i hvordan digitale systemer, CRM-løsninger og teknologi kan brukes til å forbedre arbeidsprosesser, kundedialog og informasjonsflyt i organisasjoner.
+Jeg heter Shahzadi Hina Gul og studerer IT og informasjonssystemer ved Universitetet i Agder. Jeg er interessert i hvordan informasjonssystemer kan brukes til å løse praktiske problemer i organisasjoner, og hvordan digitale løsninger kan skape verdi for både brukere og samfunnet. Derfor synes jeg Kartverket sitt prosjekt virker svært spennende, fordi det kombinerer teknologi, geodata, brukeropplevelse og samfunnsnytte.
 
-Jeg har særlig interesse for Salesforce, CRM-systemer, digitalisering, brukerstøtte og praktisk IT-arbeid. Gjennom tidligere studentprosjekter, blant annet NRL-prosjekt Gr14 2025H og et IS218-prosjekt, har jeg fått erfaring med prosjektarbeid, samarbeid, kodehåndtering og bruk av GitHub. Jeg liker å lære nye systemer, arbeide strukturert og finne gode løsninger på praktiske problemer.
+Prosjektet motiverer meg fordi løsningen kan bidra til tryggere luftfart ved å gjøre det enklere for piloter og flybesetning å rapportere farlige luftfartshindre som kraftlinjer, master og andre objekter. Jeg synes det er interessant at løsningen skal fungere i krevende situasjoner, være enkel å bruke på nettbrett, støtte registrering i kart og ha en tydelig dataflyt videre mot NRL og test-API-er.
 
-Gjennom praksisperioden ønsker jeg å få erfaring med hvordan informasjonssystemer brukes i arbeidslivet. Jeg håper å kunne bidra positivt hos dere med motivasjon, lærevillighet og interesse for digitale løsninger.
+Jeg har særlig interesse for informasjonssystemer, systemutvikling, webapplikasjoner, digitalisering, brukeropplevelse og praktisk IT-arbeid. Gjennom tidligere studentprosjekter, blant annet NRL-prosjekt Gr14 2025H og et IS218-prosjekt, har jeg fått erfaring med prosjektarbeid, samarbeid, kodehåndtering og bruk av GitHub. Disse erfaringene ønsker jeg å bygge videre på i IS-302.
 
-Jeg håper dere vil vurdere meg som praksisstudent hos dere.
+Gjennom praksisperioden ønsker jeg å lære mer om hvordan Kartverket arbeider med data, digitale tjenester, geodata og løsninger som brukes i offentlig sektor. Jeg håper å kunne bidra positivt med motivasjon, lærevillighet, strukturert arbeid og interesse for informasjonssystemer. Jeg ønsker også å få bedre forståelse for hvordan en idé eller tidligere studentprosjekt kan videreutvikles til en fungerende MVP som kan tas videre i et større prosjekt.
+
+Jeg håper dere vil vurdere meg som praksisstudent hos Kartverket.
 
 Vennlig hilsen
 Shahzadi Hina Gul
-[46850064]
-<div hinagul@live.no=""></div>
+46850064
+hinagul@live.no
 LinkedIn: https://www.linkedin.com/in/s-hina-gul-700651153
 Nettside: https://shahzadigul.github.io/is302-soknad/</div>
         </div>
@@ -588,14 +764,23 @@ Nettside: https://shahzadigul.github.io/is302-soknad/</div>
         <div class="video-box">
           <div>
             <h2>Presentasjonsvideo</h2>
+
             <p>
-              Her kan bedrifter se en kort presentasjonsvideo på maks 2 minutter. Videoen bør kort forklare hvem jeg er, hva jeg studerer, hva jeg er interessert i og hvorfor jeg søker praksisplass.
+              Her kan Kartverket se en kort presentasjonsvideo på maks 2 minutter. Videoen bør kort
+              forklare hvem jeg er, hva jeg studerer, hvorfor jeg søker praksis hos Kartverket og
+              hvorfor NRL-prosjektet virker interessant.
             </p>
-            <a class="btn btn-secondary" href="[LEGG-INN-VIDEOLENKE-HER]" target="_blank" rel="noopener">Se video</a>
+
+            <a class="btn btn-secondary" href="[LEGG-INN-VIDEOLENKE-HER]" target="_blank" rel="noopener">
+              Se video
+            </a>
           </div>
+
           <div class="video-placeholder">
             <strong>Video kommer her</strong>
-            <p>Bytt ut [LEGG-INN-VIDEOLENKE-HER] med lenken til YouTube, Google Drive eller OneDrive.</p>
+            <p>
+              Bytt ut [LEGG-INN-VIDEOLENKE-HER] med lenken til YouTube, Google Drive eller OneDrive.
+            </p>
           </div>
         </div>
       </div>
@@ -607,18 +792,23 @@ Nettside: https://shahzadigul.github.io/is302-soknad/</div>
           <span>Kontakt</span>
           <h2>Kontaktinformasjon</h2>
         </div>
+
         <div class="contact-grid">
           <div class="contact-item">
             <strong>E-post</strong>
-            <span>[legg inn e-postadresse]</span>
+            <span>hinagul@live.no</span>
           </div>
+
           <div class="contact-item">
             <strong>Telefon</strong>
-            <span>[legg inn telefonnummer]</span>
+            <span>46850064</span>
           </div>
+
           <div class="contact-item">
             <strong>LinkedIn</strong>
-            <a href="https://www.linkedin.com/in/s-hina-gul-700651153" target="_blank" rel="noopener">linkedin.com/in/s-hina-gul-700651153</a>
+            <a href="https://www.linkedin.com/in/s-hina-gul-700651153" target="_blank" rel="noopener">
+              linkedin.com/in/s-hina-gul-700651153
+            </a>
           </div>
         </div>
       </div>
@@ -627,13 +817,14 @@ Nettside: https://shahzadigul.github.io/is302-soknad/</div>
 
   <footer>
     <div class="container">
-      <p>© 2026 S Hina Gul · IS-302 Praksisprosjekt · Universitetet i Agder</p>
+      <p>© 2026 Shahzadi Hina Gul · IS-302 Praksisprosjekt · Universitetet i Agder</p>
     </div>
   </footer>
 
   <script>
     function copyApplication() {
       const text = document.getElementById("applicationText").innerText;
+
       navigator.clipboard.writeText(text)
         .then(() => alert("Søknaden er kopiert!"))
         .catch(() => alert("Kunne ikke kopiere automatisk. Marker teksten og kopier manuelt."));
